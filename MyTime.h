@@ -161,10 +161,10 @@ public:
 		}
 		if (found)
 		{
-			cout <<"ßïîíñêèé:        "<< pv->japanese << endl;
-			cout <<"Àíãëèéñêèé:      " << pv->english << endl;
-			cout <<"Ïðîãðàììðîâàíèå: " << pv->programing << endl;
-			cout <<"Ìàòåìàòèêà:      " << pv->math << endl;
+			cout <<"Ð¯Ð¿Ð¾Ð½ÑÐºÐ¸Ð¹:        "<< pv->japanese << endl;
+			cout <<"ÐÐ½Ð³Ð»Ð¸Ð¹ÑÐºÐ¸Ð¹:      " << pv->english << endl;
+			cout <<"ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ: " << pv->programing << endl;
+			cout <<"ÐœÐ°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ°:      " << pv->math << endl;
 			return;
 		}
 	}
@@ -183,10 +183,10 @@ public:
 			while (pv != NULL && pv->Date <= secondDate)
 			{
 				cout <<"***************"<<pv->Date<<"*******************"<<endl;
-				cout << "ßïîíñêèé:        " << pv->japanese << endl;
-				cout << "Àíãëèéñêèé:      " <<pv->english << endl;
-				cout << "Ïðîãðàììðîâàíèå: " <<pv->programing << endl;
-				cout << "Ìàòåìàòèêà:      " << pv->math << endl;
+				cout << "Ð¯Ð¿Ð¾Ð½ÑÐºÐ¸Ð¹:        " << pv->japanese << endl;
+				cout << "ÐÐ½Ð³Ð»Ð¸Ð¹ÑÐºÐ¸Ð¹:      " <<pv->english << endl;
+				cout << "ÐŸÑ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ: " <<pv->programing << endl;
+				cout << "ÐœÐ°Ñ‚ÐµÐ¼Ð°Ñ‚Ð¸ÐºÐ°:      " << pv->math << endl;
 
 				if (secondDate > pv->Date) pv = pv->right;
 				else pv = pv->left;
