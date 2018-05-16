@@ -1,4 +1,4 @@
-// Граффик.cpp : Defines the entry point for the console application.
+// Р“СЂР°С„С„РёРє.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
@@ -44,9 +44,9 @@ int main()
 	char answer;
 	do
 	{
-		char* Subjects[4] = { "Японский","Английский", "Программирование","Математика"};
+		char* Subjects[4] = { "РЇРїРѕРЅСЃРєРёР№","РђРЅРіР»РёР№СЃРєРёР№", "РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ","РњР°С‚РµРјР°С‚РёРєР°"};
 		Menu();
-		cout << "Введите вариант: ";
+		cout << "Р’РІРµРґРёС‚Рµ РІР°СЂРёР°РЅС‚: ";
 		cin >> answer;
 		
 		switch (answer)
@@ -55,7 +55,7 @@ int main()
 		{
 			for (int i(0); i < 4; i++)
 			{
-				cout << "Введите время для " << Subjects[i] << ": " << endl;
+				cout << "Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РґР»СЏ " << Subjects[i] << ": " << endl;
 				AddTime(&SubjectsStruct[i]);
 			}
 			first.SetTime(Date, SubjectsStruct[0], SubjectsStruct[1], SubjectsStruct[2], SubjectsStruct[3]);
@@ -70,7 +70,7 @@ int main()
 			SomeDay = CreateDate();
 			for (int i(0); i < 4; i++)
 			{
-				cout << "Введите время для " << Subjects[i] << ": " << endl;
+				cout << "Р’РІРµРґРёС‚Рµ РІСЂРµРјСЏ РґР»СЏ " << Subjects[i] << ": " << endl;
 				AddTime(&SubjectsStruct[i]);
 			}
 			first.SetTime(SomeDay, SubjectsStruct[0], SubjectsStruct[1], SubjectsStruct[2], SubjectsStruct[3]);
@@ -81,7 +81,7 @@ int main()
 		{
 			string DateForSearch;
 			DateForSearch = CreateDate();
-			cout << "Ищем по дате: " << DateForSearch << endl;
+			cout << "РС‰РµРј РїРѕ РґР°С‚Рµ: " << DateForSearch << endl;
 			first.FindInTree(DateForSearch);
 			break;
 		}
@@ -99,10 +99,10 @@ int main()
 		{
 			first.SetTimeAll(first.GetTree());
 
-			cout << "Японский:         " <<	first.GetJapanese()		<< endl;
-			cout << "Английский:       " << first.GetEnglish()		<< endl;
-			cout << "Программирование: " << first.GetProgramming()	<< endl;
-			cout << "Математика:       " << first.GetMath()			<< endl;
+			cout << "РЇРїРѕРЅСЃРєРёР№:         " <<	first.GetJapanese()		<< endl;
+			cout << "РђРЅРіР»РёР№СЃРєРёР№:       " << first.GetEnglish()		<< endl;
+			cout << "РџСЂРѕРіСЂР°РјРјРёСЂРѕРІР°РЅРёРµ: " << first.GetProgramming()	<< endl;
+			cout << "РњР°С‚РµРјР°С‚РёРєР°:       " << first.GetMath()			<< endl;
 			break;
 		}
 		default:
@@ -120,12 +120,12 @@ int main()
 
 void Menu()
 {
-	cout << "1 - Внести время за сегодня \n";
-	cout << "2 - Ввести время за указанный день\n";
-	cout << "3 - Вывести время за определенный день\n";
-	cout << "4 - Вывести время за определенный период\n";
-	cout << "5 - Вывести все потраченное время\n";
-	cout << "o - Выход" << endl;
+	cout << "1 - Р’РЅРµСЃС‚Рё РІСЂРµРјСЏ Р·Р° СЃРµРіРѕРґРЅСЏ \n";
+	cout << "2 - Р’РІРµСЃС‚Рё РІСЂРµРјСЏ Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РґРµРЅСЊ\n";
+	cout << "3 - Р’С‹РІРµСЃС‚Рё РІСЂРµРјСЏ Р·Р° РѕРїСЂРµРґРµР»РµРЅРЅС‹Р№ РґРµРЅСЊ\n";
+	cout << "4 - Р’С‹РІРµСЃС‚Рё РІСЂРµРјСЏ Р·Р° РѕРїСЂРµРґРµР»РµРЅРЅС‹Р№ РїРµСЂРёРѕРґ\n";
+	cout << "5 - Р’С‹РІРµСЃС‚Рё РІСЃРµ РїРѕС‚СЂР°С‡РµРЅРЅРѕРµ РІСЂРµРјСЏ\n";
+	cout << "o - Р’С‹С…РѕРґ" << endl;
 }
 
 template<typename T>
@@ -139,12 +139,12 @@ string CreateDate()
 {
 	string DateForSearch;
 	int month, day, year;
-	cout << "Введите дату: " << endl;
-	cout << "День: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РґР°С‚Сѓ: " << endl;
+	cout << "Р”РµРЅСЊ: " << endl;
 	cin >> day;
-	cout << "Месяц: ";
+	cout << "РњРµСЃСЏС†: ";
 	cin >> month;
-	cout << "Год: " << endl;
+	cout << "Р“РѕРґ: " << endl;
 	cin >> year;
 
 	DateForSearch = to_string(day) + "." + to_string(month) + "." + to_string(year);
