@@ -142,10 +142,10 @@ void TIME::FindInTree(string D)
 	}
 	if (found)
 	{
-		cout << "ßïîíñêèé:        " << pv->japanese << endl;
-		cout << "Àíãëèéñêèé:      " << pv->english << endl;
-		cout << "Ïðîãðàììðîâàíèå: " << pv->programing << endl;
-		cout << "Ìàòåìàòèêà:      " << pv->math << endl;
+		cout << "å”¢é“è€œæ :        " << pv->japanese << endl;
+		cout << "ç†æ±¶æ è€œæ :      " << pv->english << endl;
+		cout << "æ©¡é’½ç–£ç¥†ç—¤å¿„é¾›ï¿½: " << pv->programing << endl;
+		cout << "é”‘èˆçˆ¨èœ©èµ…:      " << pv->math << endl;
 		return;
 	}
 }
@@ -164,15 +164,15 @@ void TIME::FindInTreeComplex(string firstDate, string secondDate)
 		while (pv != NULL && pv->Date <= secondDate)
 		{
 			cout << "***************" << pv->Date << "*******************" << endl;
-			cout << "ßïîíñêèé:        " << pv->japanese << endl;
-			cout << "Àíãëèéñêèé:      " << pv->english << endl;
-			cout << "Ïðîãðàììðîâàíèå: " << pv->programing << endl;
-			cout << "Ìàòåìàòèêà:      " << pv->math << endl;
+			cout << "å”¢é“è€œæ :        " << pv->japanese << endl;
+			cout << "ç†æ±¶æ è€œæ :      " << pv->english << endl;
+			cout << "æ©¡é’½ç–£ç¥†ç—¤å¿„é¾›ï¿½: " << pv->programing << endl;
+			cout << "é”‘èˆçˆ¨èœ©èµ…:      " << pv->math << endl;
 
 			if (secondDate > pv->Date) pv = pv->right;
 			else pv = pv->left;
 		}
-		return;
+		return; 
 	}
 
 }
