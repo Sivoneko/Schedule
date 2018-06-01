@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "MyTime.h"
 
-
 //---------------------------------------------------------------------
 //Hours struct
 
@@ -142,10 +141,10 @@ void TIME::FindInTree(string D)
 	}
 	if (found)
 	{
-		cout << "唢铐耜栝:        " << pv->japanese << endl;
-		cout << "理汶栝耜栝:      " << pv->english << endl;
-		cout << "橡钽疣祆痤忄龛�: " << pv->programing << endl;
-		cout << "锑蝈爨蜩赅:      " << pv->math << endl;
+		cout << "Японский:        " << pv->japanese << endl;
+		cout << "Английский:      " << pv->english << endl;
+		cout << "Программрование: " << pv->programing << endl;
+		cout << "Математика:      " << pv->math << endl;
 		return;
 	}
 }
@@ -164,15 +163,15 @@ void TIME::FindInTreeComplex(string firstDate, string secondDate)
 		while (pv != NULL && pv->Date <= secondDate)
 		{
 			cout << "***************" << pv->Date << "*******************" << endl;
-			cout << "唢铐耜栝:        " << pv->japanese << endl;
-			cout << "理汶栝耜栝:      " << pv->english << endl;
-			cout << "橡钽疣祆痤忄龛�: " << pv->programing << endl;
-			cout << "锑蝈爨蜩赅:      " << pv->math << endl;
+			cout << "Японский:        " << pv->japanese << endl;
+			cout << "Английский:      " << pv->english << endl;
+			cout << "Программрование: " << pv->programing << endl;
+			cout << "Математика:      " << pv->math << endl;
 
 			if (secondDate > pv->Date) pv = pv->right;
 			else pv = pv->left;
 		}
-		return; 
+		return;
 	}
 
 }
